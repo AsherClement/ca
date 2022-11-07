@@ -1,0 +1,51 @@
+[base]
+name=CentOS-$releasever - Base
+#mirrorlist=http://vault.centos.org/?release=$releasever&arch=$basearch&repo=os
+baseurl=http://vault.centos.org/5.11/os/$basearch/
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
+exclude=redhat-logos php53*
+
+#released updates
+enabled=1
+
+[updates]
+name=CentOS-$releasever - Updates
+#mirrorlist=http://vault.centos.org/?release=$releasever&arch=$basearch&repo=updates
+baseurl=http://vault.centos.org/5.11/updates/$basearch/
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
+exclude=redhat-logos php53*
+
+#additional packages that may be useful
+enabled=1
+
+[extras]
+name=CentOS-$releasever - Extras
+#mirrorlist=http://vault.centos.org/?release=$releasever&arch=$basearch&repo=extras
+baseurl=http://vault.centos.org/5.11/extras/$basearch/
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
+exclude=redhat-logos php53*
+
+#additional packages that extend functionality of existing packages
+enabled=1
+
+[centosplus]
+name=CentOS-$releasever - Plus
+#mirrorlist=http://vault.centos.org/?release=$releasever&arch=$basearch&repo=centosplus
+baseurl=http://vault.centos.org/5.11/centosplus/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
+exclude=redhat-logos php53*
+
+#contrib - packages by Centos Users
+[contrib]
+name=CentOS-$releasever - Contrib
+#mirrorlist=http://vault.centos.org/?release=$releasever&arch=$basearch&repo=contrib
+baseurl=http://vault.centos.org/5.11/contrib/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
+exclude=redhat-logos php53*
